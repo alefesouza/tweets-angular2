@@ -1,0 +1,36 @@
+img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+tr:nth-child(3) td {
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.date {
+    cursor: pointer;
+    text-align: right;
+}
+
+td {
+    width: calc(30% - 25px);
+}
+
+td * {
+    vertical-align: middle;
+}
+
+td[rowspan="3"] {
+    width: 73px;
+}
+
+td:not([rowspan="3"]) {
+    padding-left: 10px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}

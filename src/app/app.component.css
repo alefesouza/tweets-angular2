@@ -1,0 +1,29 @@
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+md-sidenav-container {
+    height: 100vh;
+}
+
+md-sidenav {
+    min-width: 200px !important
+}
+
+md-sidenav md-icon, md-sidenav img {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+md-sidenav a {
+    text-decoration: none;
+}
+
+md-sidenav a.selected md-list-item {
+    background: #dddddd;
+}
+
+md-sidenav a:not(.selected) md-list-item:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}

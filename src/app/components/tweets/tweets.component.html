@@ -1,0 +1,13 @@
+<md-tab-group color="primary">
+  <md-tab label="Meus tweets">
+    <div class="wrapper">
+      <tweet *ngFor="let myTweet of myTweets" [tweet]="myTweet"></tweet>
+    </div>
+  </md-tab>
+
+  <md-tab label="Tweets me mencionando">
+    <div class="wrapper">
+      <tweet *ngFor="let tweet of tweets" [tweet]="tweet"></tweet>
+    </div>
+  </md-tab>
+</md-tab-group>

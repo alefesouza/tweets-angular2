@@ -1,0 +1,27 @@
+<md-sidenav-container>
+    <md-sidenav #sidenav>
+        <md-list>
+            <h3 md-subheader>Menu</h3>
+
+            <a routerLink="/{{ drawerItem.link }}" routerLinkActive="active" *ngFor="let drawerItem of drawerItems" [class.selected]="drawerItem === selectedDrawerItem" (click)="changePage(drawerItem)">
+                <md-list-item>
+                    <img md-list-avatar src="{{ drawerItem.image }}" *ngIf="drawerItem.image != ''">
+                    <md-icon md-list-avatar *ngIf="drawerItem.icon != ''">{{ drawerItem.icon }}</md-icon>
+                    <h4 md-line>{{drawerItem.title}}</h4>
+                </md-list-item>
+            </a>
+        </md-list>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <button md-button (click)="sidenav.toggle()">
+            <md-icon>menu</md-icon>
+        </button>
+
+        <span>{{title}}</span>
+
+        <span class="example-fill-remaining-space"></span>
+    </md-toolbar>
+
+    <router-outlet></router-outlet>
+</md-sidenav-container>

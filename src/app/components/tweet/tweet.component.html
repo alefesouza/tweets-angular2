@@ -1,0 +1,33 @@
+<md-card>
+    <table>
+        <tr>
+            <td rowspan="3">
+                <img src="{{ tweet.photo }}" (click)="user(tweet)">
+            </td>
+            <td colspan="2">
+                <b>{{ tweet.user_name }}</b> - {{ tweet.screen_name }}
+            </td>
+            <td class="date" (click)="openTweet(tweet)">
+                {{ tweet.date }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                {{ tweet.text }}
+            </td>
+        </tr>
+        <tr>
+            <td (click)="reply(tweet)">
+                <md-icon>reply</md-icon>
+            </td>
+            <td (click)="retweet(tweet)">
+                <md-icon>repeat</md-icon>
+                <span>{{ tweet.retweet_count }}</span>
+            </td>
+            <td (click)="like(tweet)">
+                <md-icon>favorite</md-icon>
+                <span>{{ tweet.favorite_count }}</span>
+            </td>
+        </tr>
+    </table>
+</md-card>
