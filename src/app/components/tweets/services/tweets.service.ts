@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class TweetsService {
-    private tweetsUrl = 'http://alefesouza.com/github/tweets.php';
+    private tweetsUrl = 'https://alefesouza.com/github/tweets.php';
 
     constructor(private http: Http) { }
 
